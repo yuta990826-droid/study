@@ -1,0 +1,15 @@
+name: はじめての自動化
+
+# ⚡️ いつ動かすか（トリガー）
+on:
+  push:
+    branches: [ "main", "feature" ] # mainかfeatureブランチにpushされたら動く
+
+# 🤖 何をさせるか（ジョブ）
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest # GitHubが用意してくれたLinuxパソコンを起動する
+
+    steps:
+      - name: ロボットに挨拶させる
+        run: echo "Hello, GitHub Actions!" # ターミナルに文字を表示するコマンド
